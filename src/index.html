@@ -3,17 +3,22 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="/output.css" rel="stylesheet" />
+    <link href="../output.css" rel="stylesheet" />
     <script
       src="https://kit.fontawesome.com/f043103afe.js"
       crossorigin="anonymous"
     ></script>
+    <script defer
+      src="../dist/post.js"
+      crossorigin="anonymous"
+    ></script>
+    
   </head>
   <body class="">
     <!-- navbar -->
-    <div class="h-20 bg-[#FFF4E2] flex gap-4 text-[#9b6f39] font-bold text-xl">
+    <nav class="h-20 bg-[#FFF4E2] flex gap-4 text-[#9b6f39] font-bold text-xl">
       <a href="./index.html" class="self-center flex h-20"
-        ><img src="./bin/logo.png" class=""
+        ><img src="../bin/logo.png" class=""
       /></a>
       <a class="self-center hover:border-b-2 border-[#B48853]"
         ><button>主頁</button></a
@@ -35,7 +40,7 @@
           </button>
         </a>
       </div>
-    </div>
+    </nav>
 
     <!-- body -->
     <h1 class="m-4 font-bold text-2xl my-2 text-[#9F5C5C]">
@@ -67,6 +72,8 @@
         <div class="text-xl font-bold">多元化導師</div>
       </div>
     </div>
+
+    <post-element details="導師#1"></post-element>
 
     <!-- bottom -->
     <div class="grid bg-slate-200 h-auto md:grid-cols-3">
