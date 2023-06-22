@@ -1,16 +1,22 @@
 {
     "compilerOptions": {
-      "jsx": "react",
-      "target": "es5",
+      "jsx": "react-jsx",
+      "target": "ES2020",
+      "module": "ESNext",
       "outDir": "dist",
       "sourceMap": true,
-      "strict": true
+      "strict": true,
+      "moduleResolution": "node"
     },
     "include": [
-      "src/**/*"
+      "./src"
     ],
     "lib": [
-      "es2016",
-      "dom"
-    ]
+      "ES2020",
+      "DOM",
+      "es6",
+      "DOM.Iterable"
+    ],
+    "references": [{ "path": "./tsconfig.node.json" }]
+    
   }
