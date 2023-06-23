@@ -9,7 +9,7 @@
       "moduleResolution": "node"
     },
     "include": [
-      "./src"
+      "src/**/*"
     ],
     "lib": [
       "ES2020",

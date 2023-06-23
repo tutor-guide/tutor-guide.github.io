@@ -18,24 +18,26 @@
   "devDependencies": {
     "@tsconfig/recommended": "^1.0.2",
     "@types/node": "^18.16.0",
+    "@types/react": "^18.2.14",
+    "@types/react-dom": "^18.2.6",
+    "@types/react-router-dom": "^5.3.3",
     "nodemon": "^2.0.22",
     "tailwindcss": "^3.2.4",
     "ts-node": "^10.9.1"
   },
   "dependencies": {
     "@types/jest": "^29.5.2",
-    "@types/react": "^18.2.12",
-    "@types/react-dom": "^18.2.5",
-    "@webcomponents/custom-elements": "^1.6.0",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "typescript": "^5.0.3",
     "@typescript-eslint/eslint-plugin": "^5.59.11",
     "@typescript-eslint/parser": "^5.59.11",
     "@vitejs/plugin-react": "^4.0.0",
+    "@webcomponents/custom-elements": "^1.6.0",
     "eslint": "^8.43.0",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.14.0",
+    "typescript": "^5.0.3",
     "vite": "^4.3.9"
   }
 }
