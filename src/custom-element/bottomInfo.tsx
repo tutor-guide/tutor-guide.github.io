@@ -18,17 +18,17 @@ export default function BottomInfo() {
       <div className="text-center m-5">
         <h1 className="border-b border-slate-300 font-bold">更多資訊</h1>
         <div className="grid">
-          <a href="">收費詳情</a>
-          <a href="">注意事項</a>
-          <a href="">登記流程</a>
+          <a href="/fee-intro">收費詳情</a>
+          <a href="/terms-and-conditions">注意事項</a>
+          <a href="/reg-procedure">登記流程</a>
         </div>
       </div>
       <div className="text-center m-5">
         <h1 className="border-b border-slate-300 font-bold">最新優惠</h1>
         <div className="grid">
-          <a href="">學生優惠</a>
-          <a href="">導師優惠</a>
-          <a href="">推薦優惠</a>
+          <a href="/student-discount">學生優惠</a>
+          <a href="/tutor-discount">導師優惠</a>
+          <a href="/recommend-discount">推薦優惠</a>
         </div>
       </div>
     </div>

@@ -4,7 +4,7 @@ export default function Home() {
       <h1 className="m-4 font-bold text-2xl my-2 text-[#9F5C5C]">
         Tutor Guide 為學生及家長配對最適合的導師
       </h1>
-      <div className="grid center md:grid-cols-2 gap-8 m-4">
+      <div className="grid md:grid-cols-2 gap-8 m-4">
         <div className="h-52  drop-shadow-lg bg-[#FFF4E2] rounded-lg text-center border text-[#9b6f39]">
           <i className="fa-solid fa-hourglass-half fa-6x my-8"></i>
           <div className="text-xl font-bold">極速配對個案</div>
