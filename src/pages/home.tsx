@@ -1,5 +1,6 @@
 import * as React from "react";
 import TutorDetails from "../custom-element/tutorDetails";
+import CaseDetails from "../custom-element/caseDetails";
 
 interface Tutor {
   name: string;
@@ -77,8 +78,94 @@ const tutors: Tutor[] = [
   },
 ];
 
+interface Case {
+  title: string;
+  photo: string;
+  subject: string;
+  description: string;
+  location: string;
+  postedDate: string;
+  budget?: string;
+}
+
+const cases: Case[] = [
+  {
+    title: "中三數學補習",
+    photo: "/bin/case-11-1.png",
+    subject: "數學",
+    description: "需要有經驗導師，協助學生提升數學成績。",
+    location: "九龍塘",
+    postedDate: "2025-08-01",
+    budget: "$300/hr",
+  },
+  {
+    title: "小五英文家教",
+    photo: "/bin/case-12-1.png",
+    subject: "英文",
+    description: "提升英文會話及寫作能力。",
+    location: "沙田",
+    postedDate: "2025-08-02",
+    budget: "$250/hr",
+  },
+  {
+    title: "中六化學補習",
+    photo: "/bin/case-13-1.png",
+    subject: "化學",
+    description: "DSE 應試技巧訓練。",
+    location: "荃灣",
+    postedDate: "2025-08-03",
+    budget: "$350/hr",
+  },
+  {
+    title: "初中中文補習",
+    photo: "/bin/case-14-1.png",
+    subject: "中文",
+    description: "提升閱讀理解及寫作能力。",
+    location: "觀塘",
+    postedDate: "2025-08-01",
+    budget: "$280/hr",
+  },
+  {
+    title: "小六常識家教",
+    photo: "/bin/case-15-1.png",
+    subject: "常識",
+    description: "協助學生準備升中試。",
+    location: "大埔",
+    postedDate: "2025-08-02",
+    budget: "$220/hr",
+  },
+  {
+    title: "高中物理補習",
+    photo: "/bin/case-16-1.png",
+    subject: "物理",
+    description: "DSE 物理重點溫習。",
+    location: "屯門",
+    postedDate: "2025-08-03",
+    budget: "$320/hr",
+  },
+  {
+    title: "中四地理補習",
+    photo: "/bin/case-17-1.png",
+    subject: "地理",
+    description: "地理概念及答題技巧。",
+    location: "元朗",
+    postedDate: "2025-08-01",
+    budget: "$300/hr",
+  },
+  {
+    title: "小三數學家教",
+    photo: "/bin/case-19-1.png",
+    subject: "數學",
+    description: "基礎數學訓練，提升自信。",
+    location: "將軍澳",
+    postedDate: "2025-08-02",
+    budget: "$200/hr",
+  },
+];
+
 export default function Home() {
   const [selectedTutor, setSelectedTutor] = React.useState<Tutor | null>(null);
+  const [selectedCase, setSelectedCase] = React.useState<Case | null>(null);
 
   return (
     <>
@@ -110,16 +197,17 @@ export default function Home() {
         className="flex overflow-x-auto gap-4 px-4 mb-8 snap-x snap-mandatory scrollbar-hide p-4"
         style={{ WebkitOverflowScrolling: 'touch' }}
       >
-        <img src="/bin/case-11-1.png" alt="Case 1" className="rounded-lg object-cover w-40 h-40 flex-shrink-0 snap-center" />
-        <img src="/bin/case-12-1.png" alt="Case 2" className="rounded-lg object-cover w-40 h-40 flex-shrink-0 snap-center" />
-        <img src="/bin/case-13-1.png" alt="Case 3" className="rounded-lg object-cover w-40 h-40 flex-shrink-0 snap-center" />
-        <img src="/bin/case-14-1.png" alt="Case 4" className="rounded-lg object-cover w-40 h-40 flex-shrink-0 snap-center" />
-        <img src="/bin/case-15-1.png" alt="Case 5" className="rounded-lg object-cover w-40 h-40 flex-shrink-0 snap-center" />
-        <img src="/bin/case-16-1.png" alt="Case 6" className="rounded-lg object-cover w-40 h-40 flex-shrink-0 snap-center" />
-        <img src="/bin/case-17-1.png" alt="Case 7" className="rounded-lg object-cover w-40 h-40 flex-shrink-0 snap-center" />
-        <img src="/bin/case-19-1.png" alt="Case 8" className="rounded-lg object-cover w-40 h-40 flex-shrink-0 snap-center" />
+        {cases.map((c, idx) => (
+          <img
+            key={idx}
+            src={c.photo}
+            alt={c.title}
+            className="rounded-lg object-cover w-40 h-40 flex-shrink-0 snap-center cursor-pointer"
+            onClick={() => setSelectedCase(c)}
+          />
+        ))}
       </div>
-
+      <CaseDetails caseData={selectedCase} onClose={() => setSelectedCase(null)} />
 
       <div className="grid md:grid-cols-2 gap-8 m-4">
         <div className="h-52  drop-shadow-lg bg-[#FFF4E2] rounded-lg text-center border text-[#9b6f39]">
