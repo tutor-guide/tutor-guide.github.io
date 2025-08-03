@@ -10,7 +10,8 @@
     "dev": "nodemon -e ts,tsx --exec \"pnpm run compile\"",
     "start": "vite",
     "build": "tsc && vite build",
-    "serve": "vite preview"
+    "serve": "vite preview",
+    "tailwind-watch": "tailwindcss build -i src/styles/main.css -o src/styles/output.css --watch"
   },
   "keywords": [],
   "author": "",
